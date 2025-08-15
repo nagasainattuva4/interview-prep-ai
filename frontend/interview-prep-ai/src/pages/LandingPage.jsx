@@ -3,6 +3,9 @@ import LandingPageIMG from "../assets/landingImage.png";
 import { APP_FEATURES } from "../utils/data";
 import { useNavigate } from "react-router-dom";
 import { LuSparkles } from "react-icons/lu";
+import Login from "./Auth/Login";
+import SignUp from "./Auth/SignUp";
+import Modal from "../components/Modal";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -128,6 +131,24 @@ const LandingPage = () => {
           Made with <span className="text-red-500">❤️</span>... Happy Coding
         </div>
       </div>
+
+      <Modal
+          isOpen={openAuthModal}
+          onClose={()=>{
+            setOpenAuthModal(false);
+            setCurrentPage("login");
+          }}
+          hideHeader
+          >
+            <div>
+              {currentPage==="login" && (
+                <Login setCurrentPage={setCurrentPage} />
+              )}
+              {currentPage==="signup" &&(
+                <SignUp setCurrentPage={setCurrentPage} />
+              )}
+            </div>
+          </Modal>
     </>
   );
 };
