@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LandingPageIMG from "../assets/landingImage.png";
+import LandingPageIMG from "../assets/hero-img.png";
 import { APP_FEATURES } from "../utils/data";
 import { useNavigate } from "react-router-dom";
 import { LuSparkles } from "react-icons/lu";
