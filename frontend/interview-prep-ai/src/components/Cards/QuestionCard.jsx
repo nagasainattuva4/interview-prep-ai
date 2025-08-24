@@ -91,7 +91,7 @@ const QuestionCard = ({
           ref={contentRef}
           className="mt-4 text-gray-700 bg-gray-50 px-5 py-3 rounded-lg"
         >
-         <AIResponsePreview content={answer} />
+          <AIResponsePreview content={answer} />
         </div>
       </div>
     </div>
